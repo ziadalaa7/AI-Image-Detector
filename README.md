@@ -98,7 +98,7 @@ python app.py
 
 ## 👤 Author
 **Ziad Alaa**
-- LinkedIn: [Ziad Alaa](https://linkedin.com/in/ziad-alaa)
-- GitHub: [ZiadAlaa](https://github.com/ZiadAlaa)
+- LinkedIn: [Ziad Alaa](https://www.linkedin.com/in/ziad-alaa-234930338/)
+- GitHub: [ZiadAlaa](https://github.com/ziadalaa7)
 
 *This project is part of a comprehensive AI Engineering portfolio and graduation project.*
