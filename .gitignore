@@ -1,0 +1,35 @@
+# 1. Virtual Environments
+venv/
+env/
+.venv/
+
+# 2. Python Cache Files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 3. Environment Variables / Secrets
+.env
+.flaskenv
+
+# 4. IDEs and Editors
+.vscode/
+.idea/
+*.swp
+
+# 5. Logs and Databases
+*.log
+*.sqlite3
+instance/
+
+# 6. OS Generated Files
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# 🚨 Machine Learning Specific Note:
+# GitHub blocks files larger than 100MB.
+# Uncomment the following lines if your trained model exceeds this limit.
+# *.h5
+# *.keras
+# ==========================================
