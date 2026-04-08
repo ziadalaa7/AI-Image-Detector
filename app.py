@@ -205,28 +205,24 @@ def index():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    # 1. استلام الصورة من الواجهة
+
     if 'image' not in request.files:
         return jsonify({'error': 'No image provided'}), 400
         
     file = request.files['image']
     
-    # 2. قراءة الصورة
     file_bytes = np.frombuffer(file.read(), np.uint8)
     img = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
     
     if img is None:
         return jsonify({'error': 'Invalid image format'}), 400
 
-    # 3. السطر السحري لحل مشكلة الألوان (من BGR لـ RGB)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
-    # 4. تجهيز الصورة للموديل
     img_resized = cv2.resize(img, (300, 300))
     img_array = img_to_array(img_resized)
     img_array = np.expand_dims(img_array, axis=0)
     
-    # 5. التوقع
     prediction = model.predict(img_array, verbose=0)[0][0]
     
     real_confidence = float(prediction) * 100
